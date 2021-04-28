@@ -13,7 +13,7 @@ var smsTotalTwoElem = document.querySelector(".smsTotalTwo")
 var totalTwoElem = document.querySelector(".totalTwo")
 
 
-var callsTotal = 0;
+var callsTotalTwo = 0;
 var smsTotal = 0;
 var totalCost = 0;
 
@@ -34,7 +34,7 @@ if (checkedRadioBtn){
     // billItemType will be 'call' or 'sms'
     
     if (billItemType === "call"){
-        callsTotal += 2.75
+        callsTotalTwo += 2.75
         totalCost += 2.75;
         
     }
@@ -42,10 +42,10 @@ if (checkedRadioBtn){
         smsTotal += 0.75;
         totalCost += 0.75;
     }
-    var totalCost = callsTotal + smsTotal;
+    var totalCost = callsTotalTwo + smsTotal;
     
     //update the totals that is displayed on the screen.
-    callTotalTwoElem.innerHTML = callsTotal.toFixed(2);
+    callTotalTwoElem.innerHTML = callsTotalTwo.toFixed(2);
     smsTotalTwoElem.innerHTML = smsTotal.toFixed(2);
     totalTwoElem.innerHTML = totalCost.toFixed(2);
 
