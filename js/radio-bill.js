@@ -14,7 +14,7 @@ var totalTwoElem = document.querySelector(".totalTwo")
 
 
 var callsTotalTwo = 0;
-var smsTotal = 0;
+var smsTotalTwo = 0;
 var totalCost = 0;
 
 //add an event listener for when the add button is pressed
@@ -39,14 +39,14 @@ if (checkedRadioBtn){
         
     }
     else if (billItemType === "sms"){
-        smsTotal += 0.75;
+        smsTotalTwo += 0.75;
         totalCost += 0.75;
     }
-    var totalCost = callsTotalTwo + smsTotal;
+    var totalCost = callsTotalTwo + smsTotalTwo;
     
     //update the totals that is displayed on the screen.
     callTotalTwoElem.innerHTML = callsTotalTwo.toFixed(2);
-    smsTotalTwoElem.innerHTML = smsTotal.toFixed(2);
+    smsTotalTwoElem.innerHTML = smsTotalTwo.toFixed(2);
     totalTwoElem.innerHTML = totalCost.toFixed(2);
 
     
