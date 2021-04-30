@@ -27,7 +27,7 @@ var updateSettings = document.querySelector(".updateSettings")
 
 // create a variables that will keep track of all three totals.ost
 var callTotal = 0;
-var smsTotal = 0;
+var smsTotalSet = 0;
 var totalBillType = 0;
 
 
@@ -69,22 +69,23 @@ if( totalBillType < criticalLevel){
            
             
         }
-        else if (billItemTypeWithSettings === "sms"){
-            smsTotal += smsCost
+        if (billItemTypeWithSettings === "sms"){
+            smsTotalSet += smsCost
             
         }
+        
     }
 
 
 
 if (callCostSettingsElem.value && smsCostSettingsElem.value) {
     
-    totalBillType = callTotal + smsTotal;
+    totalBillType = callTotal + smsTotalSet;
     
     
     //update the totals that is displayed on the screen.
     callTotalSettingsField.innerHTML = callTotal.toFixed(2);
-    smsTotalSettingsField.innerHTML = smsTotal.toFixed(2);
+    smsTotalSettingsField.innerHTML = smsTotalSet.toFixed(2);
     totalSettingsField.innerHTML = totalBillType.toFixed(2);
 
    
