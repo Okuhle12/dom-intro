@@ -2,6 +2,7 @@ function calculateBill(){
     var billType;
 
     function calculateBtnClicked(billString){  
+        console.log(billString)
         var billItems = billString.split(',');
         console.log(billItems)
        

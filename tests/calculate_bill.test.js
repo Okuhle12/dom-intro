@@ -17,16 +17,18 @@ describe('Calculate bill', function(){
     });
     it('It should be able to return warning when the total bill reaches 20', function(){
 
-        let calculateB = calculateBill();        
-        assert.equal(20,calculateB.levelNames('sms,call,call, call,call,call,call,call'));
-       assert.equal('warning',levelNames())
+        let calculateB = calculateBill();    
+        calculateB.calculateBtnClicked('sms,call,call, call,call,call,call,call')    
+        assert.equal('warning',calculateB.levelNames());
+    //    assert.equal('warning',levelNames())
         
     });
     it('It should be able to return danger when the total bill exceeds 30', function(){
 
         let calculateB = calculateBill();
-        assert.equal(40, calculateB.levelNames('sms,call,call, call,call,call,call,call,sms,call,call, call,call,call,call,call'));
-       assert.equal('danger',levelNames())
+        calculateB.calculateBtnClicked('sms,call,call, call,call,call,call,call,sms,call,call, call,call,call,call,call')
+        assert.equal('danger', calculateB.levelNames());
+    //    assert.equal('danger',levelNames())
         
     });
 });
