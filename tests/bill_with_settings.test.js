@@ -230,14 +230,18 @@ describe('Warning & critical level', function(){
             
         settingsBill.setCallCost(3.00);
         settingsBill.setSmsCost(1.50);
-        settingsBill.setWarningLevel(15);
+        settingsBill.setWarningLevel(5);
+        settingsBill.setCriticalLevel(10);
             
         settingsBill.makeCall();
         settingsBill.makeCall();
         settingsBill.makeCall();
+        settingsBill.makeCall();
+       
        
     
         assert.equal('critical', settingsBill.totalClassName());
+       
     
 });
 it("it should stop the Total call cost from increasing when the critical level has been reached", function(){
