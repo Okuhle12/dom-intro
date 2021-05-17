@@ -240,7 +240,7 @@ describe('Warning & critical level', function(){
        
        
     
-        assert.equal('critical', settingsBill.totalClassName());
+        assert.equal('danger', settingsBill.totalClassName());
        
     
 });
@@ -262,9 +262,8 @@ it("it should stop the Total call cost from increasing when the critical level h
     
    
 
-    assert.equal('critical', settingsBill.totalClassName());
-    assert.equal('critical', settingsBill.totalClassName());
-
+    assert.equal('danger', settingsBill.totalClassName());
+   
 });
 it("it should allow the total to increase after reaching the critical level & then upping the critical level", function(){
 
@@ -285,7 +284,7 @@ it("it should allow the total to increase after reaching the critical level & th
     
    
 
-    assert.equal('critical', settingsBill.totalClassName());
+    assert.equal('danger', settingsBill.totalClassName());
     assert.equal(15, settingsBill.getTotalCallCost());
 
     settingsBill.setCriticalLevel(20);
